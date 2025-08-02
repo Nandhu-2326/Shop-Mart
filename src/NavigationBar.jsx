@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Offcanvas, Button } from "react-bootstrap";
 import "./style/NavigationBar.css";
+import { useNavigate } from "react-router-dom";
 const NavigationBar = () => {
   const [show, setShow] = useState(false);
-
+  const nav = useNavigate();
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
@@ -15,8 +16,18 @@ const NavigationBar = () => {
           </div>
           <div className="col-8 d-flex align-items-center justify-content-end">
             <ul className="list-unstyled d-none d-md-flex justify-content-around w-100 align-items-center">
-              <li className="Main-link">Home</li>
-              <li className="Main-link"> Admin</li>
+              <li
+                className="Main-link"
+                onClick={() => {
+                  nav("/");
+                }}
+              >
+                Home
+              </li>
+              <li className="Main-link" onClick={() => nav("/admin")}>
+                {" "}
+                Admin
+              </li>
               <li className="Main-link">Products</li>
               <li className="Main-link">Catagori</li>
               <li className="Main-link">Contact Us</li>

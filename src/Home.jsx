@@ -3,13 +3,15 @@ import NavigationBar from "./NavigationBar";
 import "./style/Home.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { db } from "./Database";
+import Admin from "./Admin";
 
 const Home = () => {
   useEffect(() => {
     AOS.init({ duration: 1500, once: true }); // duration in ms, run only once
   }, []);
 
-  const vegtableList = [ { name : "tata", price: 20} ]
+  const vegtableList = [{ name: "tata", price: 20 }];
   return (
     <>
       <NavigationBar />
@@ -40,13 +42,6 @@ const Home = () => {
               className="img img-fluid"
               data-aos="fade-left"
             />
-          </div>
-        </div>
-      </div>
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-6 col-sm-3 col-md-4">
-   
           </div>
         </div>
       </div>

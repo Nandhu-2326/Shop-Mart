@@ -1,9 +1,12 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import Home from "./Home";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Toaster } from "react-hot-toast";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+import RounterPage from "./RounterPage";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <Home />
+    <Toaster position="top-center" reverseOrder={false} />
+    <RounterPage />
   </StrictMode>
 );
