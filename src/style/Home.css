@@ -1,0 +1,15 @@
+.bg-image{
+    background: url("bg-image.jpg") no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+}
+.shop-btn{
+    background: green;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 25px;
+}
+.shop-btn:hover{
+    background: rgb(51, 156, 51);
+}
