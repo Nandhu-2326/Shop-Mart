@@ -9,7 +9,7 @@ const Home = () => {
     AOS.init({ duration: 1500, once: true }); // duration in ms, run only once
   }, []);
 
-  const vegtableList = [  ]
+  const vegtableList = [ { name : "tata", price: 20} ]
   return (
     <>
       <NavigationBar />
@@ -46,7 +46,7 @@ const Home = () => {
       <div className="container-fluid">
         <div className="row">
           <div className="col-6 col-sm-3 col-md-4">
-
+   
           </div>
         </div>
       </div>
