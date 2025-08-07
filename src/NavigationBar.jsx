@@ -31,7 +31,6 @@ const NavigationBar = () => {
               <li className="Main-link">Products</li>
               <li className="Main-link">Catagori</li>
               <li className="Main-link">Contact Us</li>
-              
             </ul>
 
             <img
@@ -48,11 +47,11 @@ const NavigationBar = () => {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <ul className="list-unstyled gap-4 d-flex flex-column">
-                  <li>Home</li>
+                  <li onClick={() => nav("/")}>Home</li>
                   <li>Products</li>
                   <li>Catagori</li>
                   <li>Contact Us</li>
-                  <li>Admin</li>
+                  <li onClick={() => nav("/admin")}>Admin</li>
                 </ul>
               </Offcanvas.Body>
             </Offcanvas>
