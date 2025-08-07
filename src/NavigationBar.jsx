@@ -31,11 +31,7 @@ const NavigationBar = () => {
               <li className="Main-link">Products</li>
               <li className="Main-link">Catagori</li>
               <li className="Main-link">Contact Us</li>
-              <input
-                type="text"
-                placeholder="Search Product "
-                className="form-control w-25"
-              />
+              
             </ul>
 
             <img

@@ -4,8 +4,10 @@ import { collection, getDocs, query, where } from "firebase/firestore";
 import NavigationBar from "./NavigationBar";
 import toast from "react-hot-toast";
 import { ThreeDot } from "react-loading-indicators";
+import { useNavigate } from "react-router-dom";
 
 const Admin = () => {
+    const nav = useNavigate()
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [states, setStates] = useState(false);
@@ -28,6 +30,7 @@ const Admin = () => {
         toast.error("Invalid User-Name or Password");
       } else {
         toast.success("Login Success");
+        nav("/AdminDetails")
       }
     } catch (e) {
       toast.error(e.message);

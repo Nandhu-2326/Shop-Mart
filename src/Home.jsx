@@ -4,14 +4,12 @@ import "./style/Home.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { db } from "./Database";
-import Admin from "./Admin";
 
 const Home = () => {
   useEffect(() => {
     AOS.init({ duration: 1500, once: true }); // duration in ms, run only once
   }, []);
 
-  const vegtableList = [{ name: "tata", price: 20 }];
   return (
     <>
       <NavigationBar />
@@ -44,6 +42,16 @@ const Home = () => {
             />
           </div>
         </div>
+      </div>
+      <div
+        className="container d-flex mt-3 justify-content-center"
+       
+      >
+        <input
+          type="text"
+          placeholder="Search Product "
+          className="form-control w-25"
+        />
       </div>
     </>
   );
